@@ -5,6 +5,10 @@
 *.pydevproject
 .project
 .metadata
+*.class
+*.jar
+classes/
+/target/
 bin/
 tmp/
 *.tmp
