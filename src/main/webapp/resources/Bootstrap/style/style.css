@@ -1,0 +1,32 @@
+.navbar-inner{
+	background: #66cccc;
+	border: none;
+	filter: none;
+	box-shadow: none;
+}
+
+.navbar .brand{
+	color: white;
+	text-shadow: none;
+	padding: 5px 20px 5px;
+}
+
+.navbar .nav > li > a{
+	color: white;
+	text-shadow: none;
+}
+
+.navbar .divider-vertical {
+	height: 40px;
+	margin: 0 9px;
+	border-right: none;
+	border-left: none; 
+}
+/*.font{
+	font-family: Nithan;
+	src url(../resources/font/Nithan.ttf);
+}*/
+
+.thumbnail {
+	padding: 10px 20px 20px;
+}
