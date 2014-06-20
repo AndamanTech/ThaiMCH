@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+							http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- Basic Bean Create -->			
+	<!-- <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:/META-INF/database.properties</value>
+				<value>classpath:/META-INF/javamail.properties</value>
+			</list>
+		</property>
+	</bean>	 -->		
+	
+	<!-- Initialization for DataSource -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <!-- <property name="driverClassName" value="${database.driverClassName}"/>
+        <property name="url" value="${database.url}"/>
+        <property name="username" value="${database.username}"/>
+        <property name="password" value="${database.password}"/> -->
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/world"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+	</bean>
+	
+	<!-- Initialization for TransactionManager --> 
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" /> 
+	</bean>
+	
+ 	<!-- Initialization for JavaMail -->
+<!-- 	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="${javamail.host}" />
+		<property name="port" value="${javamail.port}" />
+		<property name="username" value="${javamail.username}" />
+		<property name="password" value="${javamail.password}" />
+	 
+		<property name="javaMailProperties">
+		   <props>
+       	      <prop key="mail.smtp.auth">true</prop>
+       	      <prop key="mail.smtp.starttls.enable">true</prop>
+	       </props>
+		</property>
+	</bean>
+	 
+	<bean id="sentMail" class="com.ss.vitata.util.SentMail">
+		<property name="mailSender" ref="mailSender" />
+	</bean>
+	 -->
+	<!-- <bean id="UserDao" class="com.ss.vitata.dao.impl.UserDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean> -->
+    
+	<bean id="CoutryDao" class="com.google.tmch.dao.impl.CountryDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+	
+</beans>
