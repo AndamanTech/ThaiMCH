@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	
+	
+	
 	var file=url.split('/');
 //	console.log(file);
 //	console.log(file[3]);
@@ -21,4 +23,7 @@ $(document).ready(function(){
 	}/*else if(dd =='newChildAppointment'){
 		$('#childappointtab').attr({'class':'active'});
 	}*/
+	
+	
+	
 });
