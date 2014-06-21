@@ -5,7 +5,7 @@
 
 	<display-name>ThaiMCH</display-name>
 	<servlet>
-		<!-- Override init parameter to avoid nasty -->
+		<!-- Override init parameter to avoid javascript locked -->
 		<!-- file locking issue on windows. -->
 		<servlet-name>default</servlet-name>
 		<init-param>
