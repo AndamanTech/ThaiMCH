@@ -20,7 +20,8 @@
         <property name="username" value="${database.username}"/>
         <property name="password" value="${database.password}"/> -->
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/world"/>
+         <!-- <property name="url" value="jdbc:mysql://localhost:3306/world"/> -->
+        <property name="url" value="jdbc:mysql://localhost:3306/tmch"/>
         <property name="username" value="root"/>
         <property name="password" value="root"/>
 	</bean>
@@ -53,8 +54,16 @@
         <property name="dataSource" ref="dataSource"/>
     </bean> -->
     
-	<bean id="CoutryDao" class="com.google.tmch.dao.impl.CountryDaoImpl">
+	<!-- <bean id="CoutryDao" class="com.google.tmch.dao.impl.CountryDaoImpl">
         <property name="dataSource" ref="dataSource"/>
-    </bean>
-	
+    </bean> -->
+	<bean id="UserDao" class="com.google.tmch.dao.impl.UserDaoImpl">
+	    <property name="dataSource" ref="dataSource"/>
+	</bean>
+	<bean id="MomDao" class="com.google.tmch.dao.impl.MomDaoImpl">
+	     <property name="dataSource" ref="dataSource"/>
+	</bean>
+	<bean id="ChildDao" class="com.google.tmch.dao.impl.ChildDaoImpl">
+	     <property name="dataSource" ref="dataSource"/>
+	</bean>
 </beans>

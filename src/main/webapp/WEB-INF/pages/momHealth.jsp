@@ -39,8 +39,8 @@
 	</script>
 	<%-- <script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/momProfile.js"></script> --%>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/javascript/momlink.js"></script>
-	<%-- <script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/tranformDate.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/newMomHealth.js"></script> --%>
+	<%-- <script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/tranformDate.js"></script> --%>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/javascript/momHealth.js"></script>
 	
 
 </head>
@@ -81,8 +81,8 @@
 			                	<div class="form-horizontal">		
 			                        <div class="control-group">
 			                            <label class="control-label">วัน เดือน ปี เกิด</label>
-			                            <div class="controls">
-			                                <input id="mombirth" type="text" class="datepicker input-medium" data-provide="datepicker" data-date-format="dd-mm-yyyy" readonly>
+			                            <div class="controls">			                       		                            	
+			                                <input id="mombirth" type="text" class="datepicker input-medium" data-provide="datepicker" data-date-format="dd-mm-yyyy" readonly> 
 			                            </div>
 			                        </div>	
 			                        <div class="control-group">

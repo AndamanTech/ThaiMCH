@@ -63,7 +63,7 @@
 			  		<a href="/tmch/newChildAppointment">วันนัดตรวจ</a>
 			  	</li>
 			</ul> -->
-			<%@ include file="childtab.jsp" %>
+			<%@ include file="childTab.jsp" %>
 			<form>
 			
 			<div class="row">
@@ -71,7 +71,7 @@
 			    	<button id="savevaccinebtn" type="button" class="btn btn-small btn-primary" style="float: right;">บันทึก</button>
 			    </div>
 			</div>
-			
+			<input type="hidden" id="child_vaccine">
 			<div class="row">
 	        	<div class="span12">
 	    			<table id="listPreg" class="table table-condensed table-hover">
@@ -96,7 +96,8 @@
 			   					</th>
 			   					<th style="vertical-align: middle;">
 			   						<center>
-			   							<input id="bcg1" type="text" class="input-medium datepicker" placeholder="ครั้งที่  1" style="text-align: center; background-color: #fff4f4;"> · 
+			   							<input id="bcg1" type="text" class="input-medium datepicker" data-provide="datepicker" data-date-format="dd-mm-yyyy" readonly placeholder="ครั้งที่  1" style="text-align: center; background-color: #fff4f4;"> ·
+			   							<!-- <input id="bcg1" type="text" class="input-medium datepicker" placeholder="ครั้งที่  1" style="text-align: center; background-color: #fff4f4;"> ·  -->
 			   							<span type="text" class="input-medium uneditable-input" style="background-color: gray; color: white;">ครั้งที่ 2</span> · 
 			   							<span type="text" class="input-medium uneditable-input" style="background-color: gray; color: white;">ครั้งที่ 3</span>
 			   						</center>

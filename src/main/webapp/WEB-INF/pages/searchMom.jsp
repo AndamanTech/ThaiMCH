@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+ <% request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 	<%@ include file="includePage.jsp" %>
-	<%-- <%@ include file="includejqx.jsp" %> --%>
+	<%@ include file="includejqx.jsp" %> 
 	<!-- Style -->
 	<style>
 	/* Featurettes */
@@ -65,8 +65,9 @@
     </style>
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/DT_bootstrap.css">
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/datatable-1.9.4/media/js/jquery.dataTables.js"></script>
-	<%-- <script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/tranformDate.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/newSearchMom.js"></script> --%>
+	<%-- <script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/tranformDate.js"></script>--%>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/javascript/searchMom.js"></script> 
+	<%-- <script type="text/javascript" src="<%=request.getContextPath()%>/javascript/searchmom-ext.js"></script> --%>
 	
 	
 
@@ -99,7 +100,8 @@
 			            <a href="#AddMom" style="float: right;" role="button" data-toggle="modal" class="btn btn-small btn-primary">เพิ่มข้อมูลแม่</a>
 			        </div>
 			    </div>
-			</div>			
+			</div>
+			<a href="momProfile?momid=WORINDQPXpGdGnqVGNVAJ44cPq">หน้าโปรไฟล์แม่</a>
 			<div id="AddMom" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="advancedSort" aria-hidden="true">
 			    <div class="modal-header">
 			    	<h4>เพิ่มข้อมูลแม่</h4>	
@@ -168,26 +170,26 @@
 			<br>
 			<div class="row">
 	        	<div class="span12">
-	    			<table id="momchildTable" cellpadding="0" cellspacing="0" border="0" class="table table-hover table-bordered">
+	    			<table id="momchildTable" cellpadding="0" cellspacing="0" border="0" class="table table-hover table-bordered" width="100%">
 		    			<thead>
 			   				<tr>
-			   					<!-- <th>Key mom</th> -->
-								<th style="display:none;">Key mom</th>
-			   					<th>วันที่เพิ่มในระบบ</th>
+			   					<th>Key mom</th>
+								<!-- <th style="display:none;">Key mom</th> -->
+			   					<!-- <th>วันที่เพิ่มในระบบ</th> -->
 					   			<th>เลขบัตรประชาชน</th>
 					   			<th>ชื่อ - สกุล แม่</th>
-								<th>จำนวนบุตร</th>
+								<!-- <th>จำนวนบุตร</th> -->
 			   					<!-- <th>บันทึกการตรวจครรภ์</th> -->
 			   				</tr>
 		    			</thead>
-		    			<tbody>
-		    				<tr>
+		    			<!--<tbody>
+		    				 <tr>
 		    					<td>25/04/2014</td>
 		    					<td>3333333333333</td>
 		    					<td><a href="/thaimch/momProfile">สมศรี  อายสม</a></td>
 		    					<td>2 คน</td>
 		    				</tr>
-		    				
+		    				 -->
 							<!-- <tr>
 								<td colspan="5" class="dataTables_empty">Loading data from server</td>
 							</tr> -->
@@ -197,8 +199,8 @@
 			   					<td></td>
 			   					<td></td>
 			   					<td><a href="/tmch/newMomPolicingHistory" class="btn btn-small btn-primary">ดูบันทึกการตรวจ</a></td>
-			   				</tr> -->
-			   			</tbody>
+			   				</tr>
+			   			</tbody> -->
 	    			</table>
 	    			
 	    		</div>

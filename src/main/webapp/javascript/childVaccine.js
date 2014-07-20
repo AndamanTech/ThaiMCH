@@ -1,97 +1,31 @@
 var jsonObj
 $(document).ready(function(){
 	
-/*	$.ajax({
+	$.ajax({
 		url : 'getvaccinebychildid',
 		data : {childid : childid},
 		type : 'POST',
 		success : function(record){
 			 jsonObj=$.parseJSON(record);
-			 
-			 if(jsonObj.bcg_vac != null){
-				 $('#bcg1').val(transformDateForSetDateField(jsonObj.bcg_vac));
-				 }else{
-					$('#bcg1').val(''); 
-				 }
-			 
-			 if(jsonObj.hb_vac_1 != null){
-				$('#hb1').val(transformDateForSetDateField(jsonObj.hb_vac_1)); 
-			 }else{
-				$('#hb1').val(''); 
-			 }
-			 
-			 if(jsonObj.hb_vac_2 != null){
-				$('#hb2').val(transformDateForSetDateField(jsonObj.hb_vac_2)); 
-			 }else{
-				$('#hb2').val(''); 
-		     }
-			 
-			 if(jsonObj.opv_vac_1 != null){
-				 $('#opv1').val(transformDateForSetDateField(jsonObj.opv_vac_1));
-			 }else{
-				 $('#opv1').val('');
-			 }
-			 
-			 if(jsonObj.opv_vac_2!= null){
-				 $('#opv2').val(transformDateForSetDateField(jsonObj.opv_vac_2));
-			 }else{
-				 $('#opv2').val('');
-			 }
-			 
-			 if(jsonObj.opv_vac_3!= null){
-				 $('#opv3').val(transformDateForSetDateField(jsonObj.opv_vac_3));
-			 }else{
-				 $('#opv3').val('');
-			 }
+			 console.log(jsonObj);
+			 $('#child_vaccine').val(jsonObj.child_vaccine_id);
+			 $('#bcg1').val(jsonObj.bcg1);
+			 $('#hb1').val(jsonObj.hb_vac_1); 
+			 $('#hb2').val(jsonObj.hb_vac_2); 
+			 $('#opv1').val(jsonObj.opv_vac_1);
+			 $('#opv2').val(jsonObj.opv_vac_2);	 
+			 $('#opv3').val(jsonObj.opv_vac_3);
+			 $('#mmr1').val(jsonObj.mmr_vac_1);
+			 $('#mmr2').val(jsonObj.mmr_vac_2);
+			 $('#opv4').val(jsonObj.opv_vac_4);
+			 $('#opv5').val(jsonObj.opv_vac_5);
+			 $('#je1').val(jsonObj.je_vac_1);
+			 $('#je2').val(jsonObj.je_vac_2);
+			 $('#je3').val(jsonObj.je_vac_3);
+			 $('#dt1').val(jsonObj.dt_1);
 
-			if(jsonObj.mmr_vac_1!= null){
-				$('#mmr1').val(transformDateForSetDateField(jsonObj.mmr_vac_1));
-			}else{
-				$('#mmr1').val('');
-			}
-			
-			if(jsonObj.mmr_vac_2!= null){
-				$('#mmr2').val(transformDateForSetDateField(jsonObj.mmr_vac_2));
-			}else{
-				$('#mmr2').val('');
-			}
-			
-			if(jsonObj.opv_vac_4!= null){
-				$('#opv4').val(transformDateForSetDateField(jsonObj.opv_vac_4));
-			}else{
-				$('#opv4').val('');
-			}
-			
-			if(jsonObj.opv_vac_5!= null){
-				 $('#opv5').val(transformDateForSetDateField(jsonObj.opv_vac_5));
-			}else{
-				 $('#opv5').val('');
-			}
-			
-			if(jsonObj.je_vac_1!= null){
-				$('#je1').val(transformDateForSetDateField(jsonObj.je_vac_1));
-			}else{
-				$('#je1').val('');
-			}
-			if(jsonObj.je_vac_2!= null){
-				$('#je2').val(transformDateForSetDateField(jsonObj.je_vac_2));
-			}else{
-				$('#je2').val('');
-			}
-			
-			if(jsonObj.je_vac_2!= null){
-				$('#je3').val(transformDateForSetDateField(jsonObj.je_vac_2));
-			}else{
-				$('#je3').val('');
-			}
-			
-			if(jsonObj.dt_1!= null){
-				$('#dt1').val(transformDateForSetDateField(jsonObj.dt_1));
-			}else{
-				$('#dt1').val('');
-			}
 		}
-	});*/
+	});
 	
 	
 	
@@ -100,12 +34,18 @@ $(document).ready(function(){
 	    autoclose: true,
 	    keyboardNavigation: false,
 	    forceParse: false,
-	    language: "th",
+//	    language: "th",
+//	    changeYear: true,
+	    clearBtn : true,
+	    todayHighlight : true,
+//	    todayBtn : true,
+	    language:'th-th'
 	});
 	
 	function getData(){
 		var params ={
 				childid : childid,
+				child_vaccine_id : $('#child_vaccine').val(),
 				bcg1 : $('#bcg1').val(),
 				hb1 : $('#hb1').val(),
 				hb2 : $('#hb2').val(),
@@ -125,7 +65,7 @@ $(document).ready(function(){
 	}
 	
 	
-	/*$('#savevaccinebtn').click(function(){
+	$('#savevaccinebtn').click(function(){
 		//alert('asdfas');
 		var params=getData();
 		console.log($.param(params));
@@ -139,5 +79,5 @@ $(document).ready(function(){
 				alert('error');
 			}
 		});
-	});*/
+	});
 });

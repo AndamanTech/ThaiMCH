@@ -1,9 +1,9 @@
 $(document).ready(function(){
 	// set link mom profile
-	$('#momProfileLink').attr({'href':'momProfile'});//?momid='+momid});
-	$('#momhealth').attr({'href':'momHealth'});//?momid='+momid});
-	$('#momhistory').attr({'href':'momHistory'});//?momid='+momid});
-	$('#momchildList').attr({'href':'childList'});//?momid='+momid});
+	$('#momProfileLink').attr({'href':'momProfile?momid='+momid});
+	$('#momhealth').attr({'href':'momHealth?momid='+momid});
+	$('#momhistory').attr({'href':'momHistory?momid='+momid});
+	$('#momchildList').attr({'href':'childList?momid='+momid});
 	/*$('#momlistappoint').attr({'href':'newMomAppointment?momid='+momid});*/
 
 	//--------------

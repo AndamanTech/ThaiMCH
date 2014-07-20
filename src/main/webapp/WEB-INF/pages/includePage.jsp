@@ -31,6 +31,8 @@
     <link rel="shortcut icon" href="<%=request.getContextPath()%>/logo.ico" type="text/css">
 	<link href="<%=request.getContextPath()%>/resources/datepickup-bootstrap-1.3.0/css/datepicker.css" type="text/css" rel="stylesheet">
 	
+	
+	<!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script> -->
 	<!-- Javascript -->
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/Bootstrap/Bootjs/jquery.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/Bootstrap/Bootjs/bootstrap-transition.js"></script>
@@ -45,11 +47,23 @@
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/Bootstrap/Bootjs/bootstrap-collapse.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/Bootstrap/Bootjs/bootstrap-carousel.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/Bootstrap/Bootjs/bootstrap-typeahead.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/datepickup-bootstrap-1.3.0/js/bootstrap-datepicker.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/datepickup-bootstrap-1.3.0/js/locales/bootstrap-datepicker.th.js"></script>
-	<%-- <script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/Menu.js"></script> --%>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/bootstrap-paginator-1.0/build/bootstrap-paginator.min.js"></script>
 	
+	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/bootstrap-datepicker-thai-thai/js/bootstrap-datepicker.js"></script>
+	<!-- thai extension -->
+	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/bootstrap-datepicker-thai-thai/js/bootstrap-datepicker-thai.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/bootstrap-datepicker-thai-thai/js/locales/bootstrap-datepicker.th.js"></script>
+	<%-- <script type="text/javascript" src="<%=request.getContextPath()%>/resources/datepickup-bootstrap-1.3.0/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/datepickup-bootstrap-1.3.0/js/locales/bootstrap-datepicker.th.js"></script> --%>
+	<%-- <script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/Menu.js"></script> --%>
+	<%-- <script type="text/javascript" src="<%=request.getContextPath()%>/resources/bootstrap-paginator-1.0/build/bootstrap-paginator.min.js"></script> --%>
+	<!-- <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css"> -->
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/DataTables-1.10.0/media/css/jquery.dataTables.css">
+	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/DataTables-1.10.0/media/js/jquery.dataTables.js"></script>
+	<!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script> -->
+<!-- 	<script type="text/javascript" src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script> -->
+	<%-- <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/ext-5.0.0.736/build/packages/ext-theme-neptune/build/resources/ext-theme-neptune-all.css">
+       <script type="text/javascript" src="<%=request.getContextPath()%>/resources/ext-5.0.0.736/build/ext-all.js"></script> 
+       <script type="text/javascript" src="<%=request.getContextPath()%>/resources/ext-5.0.0.736/build/packages/ext-theme-neptune/build/ext-theme-neptune.js"></script> --%>
 </head>
 	<body>
     	<!-- navbar -->
@@ -68,7 +82,7 @@
 								<a class="dropdown-toggle" data-toggle="dropdown"><i class="icon-list"></i> เมนูจัดการข้อมูล <strong class="caret"></strong></a>
 								<ul class="dropdown-menu" id="menuitem">
 		                            <li><a href="/thaimch/searchMom"><i class="icon-cog"></i> จัดการแม่</a></li>
-		                            <li><a href="/thaimch/newSearchChild"><i class="icon-cog"></i> จัดการเด็ก</a></li>
+		                            <li><a href="/thaimch/searchchild"><i class="icon-cog"></i> จัดการเด็ก</a></li>
 		                            <li><a href="/thaimch/newContent"><i class="icon-cog"></i> จัดการบทความ</a></li>
 
                         		</ul>

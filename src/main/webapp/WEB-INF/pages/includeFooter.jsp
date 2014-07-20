@@ -1,4 +1,3 @@
-
 <div id="footer">
 	<!-- footer -->
 	<hr class="featurette-divider">
@@ -11,6 +10,3 @@
 		</center>
 	</footer>
 </div>
-
-
-

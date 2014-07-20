@@ -45,8 +45,8 @@
 		var childid="<%=request.getParameter("childid")%>"
 	</script>
 	<%-- <script type="text/javascript" src="<%=request.getContextPath()%>/resources/Bootstrap/boostrap.file-input.js"></script>
-	    <script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/tranformDate.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/newChildProfile.js"></script> --%>
+	    <script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/tranformDate.js"></script> --%>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/javascript/childProfile.js"></script>
 </head>
 	<body>
 		
@@ -99,8 +99,8 @@
 			                        <div class="control-group">
 			                            <label class="control-label">วันเกิด</label>
 			                            <div class="controls">
-			                                <div class="input-append date" id="dp3"  data-date-format="dd-mm-yyyy">
-												<input id="childbirth" type="text" class="datepicker" data-provide="datepicker" data-date-format="dd-mm-yyyy" readonly>
+			                                <div class="input-append date" id="dp3"  data-date-format="dd/mm/yyyy">
+												<input id="childbirth" type="text" class="datepicker" data-provide="datepicker" data-date-format="dd/mm/yyyy" readonly>
 												<span class="add-on"><i class="icon-th"></i></span>
 											</div>
 			                            </div>

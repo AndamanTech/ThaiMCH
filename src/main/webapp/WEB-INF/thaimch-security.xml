@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security" 
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:util="http://www.springframework.org/schema/util"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                 http://www.springframework.org/schema/security 
+                 http://www.springframework.org/schema/security/spring-security-3.1.xsd
+                 http://www.springframework.org/schema/util 
+                 http://www.springframework.org/schema/util/spring-util-3.0.xsd
+                 http://www.springframework.org/schema/context 
+                 http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+    <global-method-security pre-post-annotations="enabled">
+     </global-method-security>
+     <http use-expressions="true" auto-config="true">
+         <session-management>
+             <concurrency-control max-sessions="1" expired-url="/tmch/login"/>
+             
+         </session-management>
+         <intercept-url pattern="/tmch/newRegis*" access="permitAll"/>
+         <intercept-url pattern="/tmch/newLogin*" access="permitAll"/>
+         <intercept-url pattern="/*" access="isAuthenticated()"/>
+         <logout logout-success-url="/tmch/newLogin"/>
+        <!--  <form-login 	login-page="/tmch/login"
+             			default-target-url="/tmch/index"
+             			authentication-failure-url="/tmch/login?access=fail"
+             			always-use-default-target="false"/> -->
+         <form-login 	login-page="/tmch/newLogin"
+             			default-target-url="/tmch/newIndex"
+             			authentication-failure-url="/tmch/newLogin?access=fail"
+             			always-use-default-target="false"/>
+     	 <remember-me key="rememberMeKey" 
+                     user-service-ref="userDetialsService"/>
+     </http>
+     
+     <beans:bean 	id="userDetialsService"
+         			class="com.tmch.security.UserDetialServices">
+     </beans:bean>
+     <authentication-manager alias="authenManager">
+         <authentication-provider user-service-ref="userDetialsService">
+             <password-encoder hash="sha" base64="true" />
+         </authentication-provider>
+     </authentication-manager>
+     
+ <!--     <beans:bean 	id="messageSource"
+         			class="org.springframework.context.support.ResourceBundleMessageSource">
+         <beans:property 	name="basename"
+             				value="springsecurity"></beans:property>
+     </beans:bean> -->
+ </beans:beans>

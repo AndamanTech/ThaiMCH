@@ -50,7 +50,12 @@
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/Bootstrap/Bootjs/bootstrap-carousel.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/Bootstrap/Bootjs/bootstrap-typeahead.js"></script>
 	
-	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/datepickup-bootstrap-1.3.0/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/jojosati-bootstrap-datepicker-thai/js/bootstrap-datepicker.js"></script>
+	<!-- thai extension -->
+	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/jojosati-bootstrap-datepicker-thai/js/bootstrap-datepicker-thai.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/jojosati-bootstrap-datepicker-thai/js/locales/bootstrap-datepicker.th.js"></script>
+	
+	<%-- <script type="text/javascript" src="<%=request.getContextPath()%>/resources/datepickup-bootstrap-1.3.0/js/bootstrap-datepicker.js"></script> --%>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/resources/bootstrap-paginator-1.0/build/bootstrap-paginator.min.js"></script>
 <%-- 	<script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/login.js"></script> --%>
 </head>

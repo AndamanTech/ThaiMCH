@@ -36,10 +36,11 @@
 	<!-- Script -->
 	<script type="text/javascript">
 		var momid='<%=request.getParameter("momid")%>';
+		console.log("Mom id : "+momid);
 	</script>
 	<%-- <script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/momProfile.js"></script> --%>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/javascript/momlink.js"></script>
-
+	<script type="text/javascript" src="<%=request.getContextPath()%>/javascript/momProfile.js"></script>
 </head>
 	<body>
 	

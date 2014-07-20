@@ -4,7 +4,7 @@
 <head>
 
 	<%@ include file="includePage.jsp" %>
-	<%-- <%@ include file="includejqx.jsp" %> --%>
+	<%@ include file="includejqx.jsp" %>>
 	<!-- Style -->
 	<style>
 	/* Featurettes */
@@ -38,8 +38,8 @@
 		
 	</script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/javascript/momlink.js"></script>
-<%-- 	<script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/tranformDate.js"></script>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/newMomHistory.js"></script> --%>
+<%-- 	<script type="text/javascript" src="<%=request.getContextPath()%>/javascript/app/tranformDate.js"></script>--%>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/javascript/momHistory.js"></script> 
 	
 </head>
 	<body>
@@ -90,7 +90,7 @@
 					          	<div class="control-group">
 					            	<label class="control-label">คาดคะเนกำหนดการคลอด</label>
 					            	<div class="controls">
-					            		<input id="childbirth" type="text" class="datepicker input-medium" data-provide="datepicker" data-date-format="dd-mm-yyyy" readonly>
+					            		 <input id="childbirth" type="text" class="datepicker input-medium" data-provide="datepicker" data-date-format="dd/mm/yyyy" readonly>
 										<span class="add-on"><i class="icon-th"></i></span>
 					              		<!-- <input type="text" class="input-xlarge"> -->
 					            	</div>
@@ -98,9 +98,9 @@
 					          	
 					          	<div class="control-group">
 					            	<label class="control-label">น้ำหนักก่อนตั้งครรภ์ (ก.ก.)</label>
-					            	<div id="weightbfpreg" class="controls">
+					            	<div   class="controls">
 					              		<!-- <input type="text" class="input-xlarge"> -->
-					              		<input type="text" class="input-xlarge">
+					              		<input type="text" id="weightbfpreg"  class="input-xlarge">
 					            	</div>
 					          	</div>
 					          	

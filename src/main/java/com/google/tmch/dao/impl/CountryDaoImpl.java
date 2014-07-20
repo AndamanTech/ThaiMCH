@@ -2,8 +2,6 @@ package com.google.tmch.dao.impl;
 
 import java.util.List;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
@@ -12,7 +10,7 @@ import com.google.tmch.model.City;
 
 public class CountryDaoImpl extends JdbcDaoSupport implements CountryDao{
 	
-	private static final Log LOG=LogFactory.getLog(CountryDaoImpl.class);
+//	private static final Log LOG=LogFactory.getLog(CountryDaoImpl.class);
 	
 	@Override
 	public List<City> getCountry() throws Exception {

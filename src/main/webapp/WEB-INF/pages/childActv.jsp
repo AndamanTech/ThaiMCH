@@ -4,7 +4,7 @@
 <head>
 
 	<%@ include file="includePage.jsp" %>
-	<%@ include file="includejqx.jsp" %>
+	<%-- <%@ include file="includejqx.jsp" %> --%>
 	
 	<!-- Style -->
 	<style>
@@ -64,7 +64,7 @@
 			  		<a href="/tmch/newChildAppointment">วันนัดตรวจ</a>
 			  	</li>
 			</ul> -->
-			<%@ include file="childtab.jsp" %>
+			<%@ include file="childTab.jsp" %>
 			<div class="container">
 			    <div class="row">
 			        <div class="span12" >
