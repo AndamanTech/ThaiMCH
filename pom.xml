@@ -10,9 +10,10 @@
 	<artifactId>ThaiMCH</artifactId>
 
 	<properties>
-		<appengine.app.version>1</appengine.app.version>
-		<appengine.target.version>1.8.8</appengine.target.version>
+		<appengine.app.version>15</appengine.app.version>
+		<appengine.target.version>1.9.4</appengine.target.version>
 		<spring.version>3.1.1.RELEASE</spring.version>
+		<spring.security.version>3.1.4.RELEASE</spring.security.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -168,7 +169,36 @@
 			<version>${spring.version}</version>
 		</dependency>
 		<!-- End Spring Framework -->
-
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.9</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.2</version>
+		</dependency>
 		<!-- Mysql -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -196,6 +226,11 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-library</artifactId>
+			<version>2.10.4</version>
+		</dependency>
 	</dependencies>
 
 	<build>
